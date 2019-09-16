@@ -20,7 +20,7 @@ namespace CoffeShopWithArrayWindowsFormsApp
         int count = 0;
         string result = "";
         const int size = 3;
-
+        
         string[] customerName = new string[size];
         string[] contactNo = new string[size];
         string[] address = new string[size];
@@ -30,7 +30,6 @@ namespace CoffeShopWithArrayWindowsFormsApp
 
         private void saveButton_Click(object sender, EventArgs e)
         {
-
             if (count < size)
             {
                 if (customerNameTextBox.Text == "" || contactNoTextBox.Text == "" || addressTextBox.Text == ""
@@ -70,7 +69,6 @@ namespace CoffeShopWithArrayWindowsFormsApp
                         MessageBox.Show("Quantity field required  numeric value: ");
                         quantityTextBox.Text = "";
                     }
-
                     count++;
                     Clear();
                 }
@@ -80,8 +78,6 @@ namespace CoffeShopWithArrayWindowsFormsApp
                 MessageBox.Show("Array is full..");
             }
             Clear();
-
-
             if (count == size)
             {
                 for (int i = 0; i < size; i++)
@@ -91,12 +87,9 @@ namespace CoffeShopWithArrayWindowsFormsApp
                               + quantity[i] +"\nUnit Price:   "+ coffeCost[i]/ quantity[i]+"" +
                               "\nTotal Price:   "+ coffeCost[i]+"\n\n";
                 }
-
                 showAllRichTextBox.Text = result;
                 count++;
             }
-
-
         }
 
         private void Clear()
@@ -108,6 +101,5 @@ namespace CoffeShopWithArrayWindowsFormsApp
             contactNoTextBox.Clear();
             quantityTextBox.Clear();
         }
-
     }
 }
